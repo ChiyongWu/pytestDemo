@@ -4,15 +4,15 @@ from common.read_data import data
 from common.logger import logger
 
 BASE_PATH = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
-data_file_path = os.path.join(BASE_PATH, "config", "setting.ini")
-data = data.load_ini(data_file_path)["mysql"]
+data_file_path = os.path.join(BASE_PATH, "config", "setting.yaml")
+data = data.load_yaml(data_file_path)["mysql"]
 
 DB_CONF = {
-    "host": data["MYSQL_HOST"],
-    "port": int(data["MYSQL_PORT"]),
-    "user": data["MYSQL_USER"],
-    "password": data["MYSQL_PASSWD"],
-    "db": data["MYSQL_DB"]
+    "host": data["mysql_host"],
+    "port": data["mysql_port"],
+    "user": data["mysql_user"],
+    "password": data["mysql_passwd"],
+    "db": data["mysql_db"]
 }
 
 
