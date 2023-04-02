@@ -1,6 +1,27 @@
+project_name:
+  - 接口自动化框架
+
+tester_name:
+  吴炽泳
+
 mysql:
   mysql_host: 127.0.0.1
   mysql_port: 3306
   mysql_user: root
   mysql_passwd: "123456"
   mysql_db: root
+
+# 企业通知的相关配置
+WeChat:
+  webhook: https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=22748687-fa3b-4e48-a5d7-0502cef422b4
+
+# 环境配置
+env:
+  test:
+    api_root_url: http://qaadminweb.yaowutech.cn/api
+  dev:
+    api_root_url: http://qaadminweb.yaowutech.cn/api
+  pre:
+    api_root_url: http://qaadminweb.yaowutech.cn/api
+  prod:
+    api_root_url: http://qaadminweb.yaowutech.cn/api

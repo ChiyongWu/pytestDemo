@@ -1,10 +1,10 @@
 import os
 from core.rest_client import RestClient
-from common.read_data import data
+from common.read_data import read_file_data
 
 BASE_PATH = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
-data_file_path = os.path.join(BASE_PATH, "config", "setting.ini")
-api_root_url = data.load_ini(data_file_path)["host"]["api_root_url"]
+data_file_path = os.path.join(BASE_PATH, "config", "setting.yaml")
+api_root_url = read_file_data.load_yaml(data_file_path)["env"]["test"]["api_root_url"]
 
 
 class User(RestClient):
